@@ -2,9 +2,9 @@ import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import {
   FileText, ShieldCheck, PieChart, Briefcase, TrendingUp, HandCoins,
-  Receipt, Wallet, Landmark, LineChart, FileSearch, CheckCircle2,
+  Receipt, Wallet, Landmark, LineChart, FileSearch,
   AlertTriangle, Users, Building, ShieldAlert, FileSignature, BookOpen,
-  ArrowRight, ArrowLeft, Stamp, Info, CalendarDays
+  ArrowRight, ArrowLeft, Info, CalendarDays
 } from 'lucide-react';
 import './Financial.css';
 

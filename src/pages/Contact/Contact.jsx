@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 import './Contact.css';
-import heroBg from '../../assets/View_G.jpg.jpeg';
+import heroBg from '../../assets/VIew_G.jpg.jpeg';
 
 const Contact = () => {
   const containerRef = useRef(null);

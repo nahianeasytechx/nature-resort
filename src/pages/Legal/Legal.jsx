@@ -2,10 +2,10 @@ import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import {
   FileText, ShieldCheck, Scale, FileSignature, CheckSquare, 
-  FolderOpen, Receipt, BookOpen, Stamp, Briefcase, Landmark,
+  FolderOpen, Receipt, BookOpen, Stamp, Landmark,
   LineChart, FileSearch, MessageSquare, ClipboardCheck,
   AlertTriangle, Clock, CloudRain, Users, ShieldAlert,
-  ArrowRightLeft, AlertCircle, Building, Building2, Handshake, CircleDollarSign
+  Building, Building2, Handshake, CircleDollarSign
 } from 'lucide-react';
 import './Legal.css';
 

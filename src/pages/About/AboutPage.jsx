@@ -1,8 +1,7 @@
 import { useEffect, useRef } from 'react';
-import { Target, Compass, Award, ShieldCheck, Leaf } from 'lucide-react';
+import { Target, Compass, Award, ShieldCheck } from 'lucide-react';
 import './AboutPage.css';
 import heroBg from '../../assets/Front Long.jpg.jpeg';
-import logoImg from '../../assets/logo.png';
 
 const VALUES = [
   { icon: Target, title: 'Our Mission', desc: 'To create a premier hospitality destination in Bangladesh offering seamless land share ownership and world-class resort experiences.' },
