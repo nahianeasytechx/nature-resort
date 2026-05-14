@@ -1,0 +1,205 @@
+.gallery-preview {
+  padding: clamp(2.5rem, 4vw, 4rem) 0;
+  background: var(--color-navy);
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-preview::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+}
+
+.gallery-preview__header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.gallery-preview__header .section-label {
+  justify-content: center;
+  color: var(--color-gold);
+}
+
+.gallery-preview__header .section-label::before {
+  background: var(--color-gold);
+}
+
+.gallery-preview__header .section-title {
+  color: var(--color-white);
+}
+
+.gallery-preview__header .section-description {
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 auto;
+}
+
+/* Masonry Grid */
+.gallery-preview__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  gap: 1rem;
+}
+
+.gallery-preview__item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+.gallery-preview__item:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.gallery-preview__item:nth-child(2) {
+  grid-column: span 1;
+}
+
+.gallery-preview__item:nth-child(3) {
+  grid-column: span 1;
+}
+
+.gallery-preview__item:nth-child(4) {
+  grid-column: span 1;
+}
+
+.gallery-preview__item:nth-child(5) {
+  grid-column: span 1;
+}
+
+.gallery-preview__img {
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  object-fit: cover;
+  transition: transform 0.6s ease, filter 0.4s ease;
+}
+
+.gallery-preview__item:nth-child(1) .gallery-preview__img {
+  min-height: 520px;
+}
+
+.gallery-preview__item:hover .gallery-preview__img {
+  transform: scale(1.08);
+  filter: brightness(0.7);
+}
+
+/* Overlay */
+.gallery-preview__item-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0) 50%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.gallery-preview__item:hover .gallery-preview__item-overlay {
+  opacity: 1;
+}
+
+.gallery-preview__item-title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  color: var(--color-white);
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.gallery-preview__item-sub {
+  font-size: var(--fs-xs);
+  color: var(--color-gold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* View All Link */
+.gallery-preview__cta {
+  text-align: center;
+  margin-top: var(--space-2xl);
+}
+
+.gallery-preview__link {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: var(--transition-base);
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid transparent;
+}
+
+.gallery-preview__link:hover {
+  color: var(--color-gold-light);
+  border-bottom-color: var(--color-gold-light);
+  gap: 1rem;
+}
+
+.gallery-preview__link-arrow {
+  transition: transform 0.3s ease;
+}
+
+.gallery-preview__link:hover .gallery-preview__link-arrow {
+  transform: translateX(4px);
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 1024px) {
+  .gallery-preview__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-preview__item:nth-child(1) .gallery-preview__img {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery-preview {
+    padding: var(--space-3xl) 0;
+  }
+
+  .gallery-preview__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .gallery-preview__item:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .gallery-preview__item:nth-child(1) .gallery-preview__img {
+    min-height: 250px;
+  }
+
+  .gallery-preview__img {
+    min-height: 180px;
+  }
+
+  .gallery-preview__item-overlay {
+    opacity: 1;
+    padding: 1rem;
+  }
+}

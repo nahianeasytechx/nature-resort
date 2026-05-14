@@ -1,0 +1,360 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================
+   Full Background Image
+   ============================================ */
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero__bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70% center; /* Push the building to the right */
+  transform: scale(1); /* Zoom in 10% */
+}
+
+/* ============================================
+   Gradient Overlay - fades from navy on left 
+   to transparent on right, blending with image
+   ============================================ */
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    /* Strong navy on the left for text readability */
+    linear-gradient(
+      to right,
+      rgba(0, 77, 115, 0.95) 0%,
+      rgba(0, 77, 115, 0.92) 25%,
+      rgba(0, 77, 115, 0.75) 45%,
+      rgba(0, 77, 115, 0.4) 60%,
+      rgba(0, 77, 115, 0.15) 75%,
+      rgba(0, 77, 115, 0.05) 90%,
+      transparent 100%
+    ),
+    /* Subtle bottom gradient for badge area */
+    linear-gradient(
+      to top,
+      rgba(0, 77, 115, 0.7) 0%,
+      rgba(0, 77, 115, 0.3) 15%,
+      transparent 30%
+    ),
+    /* Slight top gradient for navbar blend */
+    linear-gradient(
+      to bottom,
+      rgba(0, 77, 115, 0.6) 0%,
+      transparent 15%
+    );
+}
+
+/* ============================================
+   Content - positioned on the left
+   ============================================ */
+.hero__container {
+  position: relative;
+  z-index: 2;
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 clamp(2rem, 5vw, 4rem);
+  padding-top: clamp(120px, 18vh, 180px);
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+}
+
+.hero__content {
+  max-width: 520px;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.hero__label {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 1.5rem;
+}
+
+.hero__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 4.2vw, 3.8rem);
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.12;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.hero__title-highlight {
+  color: var(--color-gold);
+  font-style: italic;
+}
+
+.hero__description {
+  font-size: clamp(0.88rem, 1vw, 1rem);
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  max-width: 420px;
+}
+
+/* ============================================
+   Action Buttons
+   ============================================ */
+.hero__actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn--gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.6rem;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--color-white);
+  background: var(--color-gold);
+  border: 1px solid var(--color-gold);
+  border-radius: var(--radius-sm);
+  transition: var(--transition-base);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn--gold:hover {
+  background: var(--color-gold-dark);
+  border-color: var(--color-gold-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(201, 169, 110, 0.35);
+}
+
+.btn__icon {
+  font-size: 1rem;
+}
+
+.btn--outline-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.6rem;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--color-white);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: var(--radius-sm);
+  transition: var(--transition-base);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn--outline-white:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.7);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   Bottom Trust Badges
+   ============================================ */
+.hero__badges {
+  position: relative;
+  z-index: 2;
+  padding: 1.25rem 0;
+  margin-top: auto;
+}
+
+.hero__badges-inner {
+  max-width: 600px;
+  padding: 0 clamp(2rem, 5vw, 4rem);
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.hero__badge {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.hero__badge-icon {
+  color: var(--color-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+
+.hero__badge-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__badge-title {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.2;
+}
+
+.hero__badge-sub {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.2;
+}
+
+.hero__badge-divider {
+  width: 1px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 1024px) {
+  .hero__bg-image {
+    object-position: 65% center;
+  }
+
+  .hero__overlay {
+    background:
+      linear-gradient(
+        to right,
+        rgba(0, 77, 115, 0.95) 0%,
+        rgba(0, 77, 115, 0.88) 35%,
+        rgba(0, 77, 115, 0.6) 55%,
+        rgba(0, 77, 115, 0.3) 75%,
+        transparent 100%
+      ),
+      linear-gradient(
+        to top,
+        rgba(0, 77, 115, 0.7) 0%,
+        transparent 25%
+      ),
+      linear-gradient(
+        to bottom,
+        rgba(0, 77, 115, 0.6) 0%,
+        transparent 15%
+      );
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 600px;
+  }
+
+  .hero__bg-image {
+    object-position: 60% center;
+  }
+
+  .hero__overlay {
+    background:
+      linear-gradient(
+        to right,
+        rgba(0, 77, 115, 0.96) 0%,
+        rgba(0, 77, 115, 0.9) 40%,
+        rgba(0, 77, 115, 0.65) 65%,
+        rgba(0, 77, 115, 0.4) 85%,
+        rgba(0, 77, 115, 0.25) 100%
+      ),
+      linear-gradient(
+        to top,
+        rgba(0, 77, 115, 0.8) 0%,
+        transparent 30%
+      ),
+      linear-gradient(
+        to bottom,
+        rgba(0, 77, 115, 0.7) 0%,
+        transparent 20%
+      );
+  }
+
+  .hero__container {
+    padding-top: 110px;
+  }
+
+  .hero__content {
+    max-width: 380px;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn--gold,
+  .btn--outline-white {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+
+  .hero__badges-inner {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .hero__badge-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__overlay {
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(0, 77, 115, 0.8) 0%,
+        rgba(0, 77, 115, 0.6) 40%,
+        rgba(0, 77, 115, 0.75) 70%,
+        rgba(0, 77, 115, 0.9) 100%
+      );
+  }
+
+  .hero__container {
+    padding-top: 100px;
+    align-items: center;
+  }
+
+  .hero__content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero__actions {
+    align-items: center;
+  }
+
+  .hero__badges-inner {
+    justify-content: center;
+    padding: 0 1rem;
+  }
+}

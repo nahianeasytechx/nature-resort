@@ -1,0 +1,448 @@
+/* ============================================
+   Global Overrides for Financial Page
+   ============================================ */
+.fin-page {
+  background: var(--color-white);
+}
+
+.fin-section {
+  padding: clamp(4rem, 6vw, 6rem) 0;
+}
+
+.bg-off-white {
+  background: var(--color-off-white);
+}
+
+.bg-white {
+  background: var(--color-white);
+}
+
+.fin-section-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.fin-text {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+/* Common Table Styles */
+.fin-table {
+  background: var(--color-white);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.fin-table__header {
+  display: flex;
+  background: var(--color-navy);
+  color: var(--color-white);
+  padding: 1rem 1.5rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.fin-table__row {
+  display: flex;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  align-items: center;
+  transition: background 0.2s;
+}
+
+.fin-table__row:last-child {
+  border-bottom: none;
+}
+
+.fin-table__row:hover {
+  background: var(--color-off-white);
+}
+
+.fin-table__col-1 {
+  flex: 0 0 35%;
+  font-weight: 600;
+  color: var(--color-primary);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.fin-table__col-2 {
+  flex: 1;
+  font-size: 0.85rem;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+/* Common Info Strip */
+.fin-info-strip {
+  background: rgba(201, 169, 110, 0.1);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+.fin-info-strip strong {
+  color: var(--color-navy);
+}
+
+/* Split Grid Layout */
+.fin-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+/* ============================================
+   1. Hero Section
+   ============================================ */
+.fin-hero {
+  position: relative;
+  height: 85vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--container-padding);
+}
+
+.fin-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.fin-hero__bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.fin-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to right,
+    rgba(0, 77, 115, 0.95) 0%,
+    rgba(0, 77, 115, 0.85) 45%,
+    transparent 100%
+  );
+}
+
+.fin-hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 750px;
+  padding-top: 60px;
+}
+
+.fin-hero__content .section-label--light {
+  justify-content: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.fin-hero__title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  font-weight: 500;
+  color: var(--color-white);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.fin-hero__desc {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  max-width: 600px;
+}
+
+.fin-hero__badges {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.fin-hero__badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.fin-hero__badge-icon {
+  color: var(--color-gold);
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--color-gold);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fin-hero__badge-label {
+  font-size: 0.75rem;
+  color: var(--color-white);
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+/* ============================================
+   2. Revenue Flow Diagram
+   ============================================ */
+.fin-flow__diagram {
+  margin-top: 3rem;
+  position: relative;
+  padding: 1rem 0;
+}
+
+.fin-flow__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.fin-flow__row--reverse {
+  flex-direction: row-reverse;
+  margin-bottom: 0;
+}
+
+.fin-flow__node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+  width: 90px;
+}
+
+.fin-flow__icon {
+  width: 60px;
+  height: 60px;
+  background: var(--color-navy);
+  color: var(--color-gold);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 77, 115, 0.15);
+  position: relative;
+  z-index: 2;
+}
+
+.fin-flow__node span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+.fin-flow__connector-right {
+  position: absolute;
+  right: 44px;
+  top: 40px;
+  bottom: 64px;
+  width: 1.5px;
+  background: var(--color-gold);
+  z-index: 1;
+}
+
+/* Adjust lines using absolute positioning for the connecting arrows to ensure proper layout */
+.fin-flow__arrow {
+  flex-shrink: 0;
+}
+
+/* ============================================
+   4. Reporting Grid
+   ============================================ */
+.fin-reporting__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.fin-reporting__card {
+  background: var(--color-off-white);
+  border: 1px solid rgba(0,0,0,0.05);
+  padding: 1.75rem 1.25rem;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: var(--transition-base);
+}
+
+.fin-reporting__card:hover {
+  background: var(--color-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.fin-reporting__icon {
+  color: var(--color-navy);
+  margin-bottom: 1rem;
+}
+
+.fin-reporting__title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.fin-reporting__desc {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+/* ============================================
+   5. Disclaimers Row
+   ============================================ */
+.fin-disclaimers {
+  padding: clamp(3rem, 5vw, 5rem) 0;
+}
+
+.fin-disclaimers__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.fin-disclaimers__card {
+  background: rgba(201, 169, 110, 0.08);
+  padding: 2rem 1.25rem;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(201, 169, 110, 0.2);
+}
+
+.fin-disclaimers__icon {
+  color: var(--color-gold);
+  margin-bottom: 1.25rem;
+}
+
+.fin-disclaimers__title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.fin-disclaimers__desc {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* ============================================
+   Responsive Adjustments
+   ============================================ */
+@media (max-width: 1200px) {
+  .fin-grid-2 {
+    gap: 2rem;
+  }
+  .fin-reporting__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .fin-disclaimers__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .fin-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  .fin-table__col-1 {
+    flex: 0 0 40%;
+  }
+  .fin-flow {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .fin-hero__badges {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    gap: 1.5rem;
+  }
+  .fin-flow__diagram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .fin-flow__row, .fin-flow__row--reverse {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .fin-flow__arrow {
+    transform: rotate(90deg);
+  }
+  .fin-flow__connector-right {
+    display: none;
+  }
+  .fin-reporting__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  .fin-reporting__card {
+    padding: 1.25rem 0.75rem;
+  }
+  .fin-disclaimers__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .fin-table__header {
+    display: none;
+  }
+  .fin-table__row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .fin-disclaimers__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  .fin-disclaimers__card {
+    padding: 1.25rem 0.75rem;
+  }
+}
