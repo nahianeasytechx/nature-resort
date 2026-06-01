@@ -151,6 +151,12 @@
   justify-content: flex-start;
   margin-bottom: 1.5rem;
 }
+@media (max-width: 460px) {
+  .own-model__left .section-label,
+.own-model__right .section-label {
+  justify-content: center;
+}
+}
 
 .own-model__text {
   font-size: 0.95rem;
@@ -352,7 +358,12 @@
   gap: 3rem;
   margin-top: 4rem;
 }
-
+@media (max-width:480px){
+  /* Bottom Grid */
+.own-process__bottom.grid-2 {
+  margin-top: 1rem;
+}
+}
 .own-process__who,
 .own-process__highlights {
   background: rgba(0, 0, 0, 0.03);

@@ -153,6 +153,15 @@
   text-align: left;
   justify-content: flex-start;
 }
+@media (max-width: 480px){
+  .proj-overview__left .section-label,
+.proj-overview__left .section-title,
+.proj-overview__right .section-label,
+.proj-overview__right .section-title {
+  text-align: center;
+  justify-content: center;
+}
+}
 
 .proj-overview__leaf {
   position: absolute;

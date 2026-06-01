@@ -133,6 +133,12 @@
   margin-top: var(--space-2xl);
 }
 
+@media (max-width: 460px) {
+  .gallery-preview__cta {
+  margin-top: var(--space-md);
+}
+}
+
 .gallery-preview__link {
   font-family: var(--font-body);
   font-size: var(--fs-sm);

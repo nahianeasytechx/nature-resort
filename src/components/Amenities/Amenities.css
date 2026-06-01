@@ -9,7 +9,11 @@
   text-align: center;
   margin-bottom: var(--space-3xl);
 }
-
+@media (max-width: 460px) {
+  .amenities__header {
+  margin-bottom: var(--space-xl);
+}
+}
 .amenities__header .section-label {
   justify-content: center;
 }
