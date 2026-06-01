@@ -127,7 +127,7 @@
    ============================================ */
 @media (max-width: 768px) {
   .flagship {
-    min-height: 380px;
+    min-height: 340px;
   }
 
   .flagship__overlay {
@@ -146,8 +146,26 @@
       );
   }
 
+  .flagship__title {
+    font-size: 1.15rem;
+  }
+
+  .flagship__text {
+    font-size: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
   .flagship__info-grid {
     grid-template-columns: 1fr;
-    gap: 0.875rem;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .flagship__info-label {
+    font-size: 0.62rem;
+  }
+
+  .flagship__info-value {
+    font-size: 0.75rem;
   }
 }

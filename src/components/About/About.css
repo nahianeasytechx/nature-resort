@@ -139,15 +139,38 @@
 
 @media (max-width: 640px) {
   .about {
-    padding: 3rem 0;
+    padding: 2.5rem 0;
+    overflow: hidden;
+  }
+
+  .about__title {
+    font-size: 1.3rem;
+  }
+
+  .about__text {
+    font-size: 0.78rem;
   }
 
   .about__features-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 0.75rem;
   }
 
   .about__feature-card {
-    padding: 1.25rem 0.75rem;
+    padding: 1rem 0.75rem;
+  }
+
+  .about__feature-icon-wrap {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 0.65rem;
+  }
+
+  .about__feature-title {
+    font-size: 0.75rem;
+  }
+
+  .about__feature-desc {
+    font-size: 0.65rem;
   }
 }

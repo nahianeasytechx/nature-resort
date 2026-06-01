@@ -247,8 +247,93 @@
     padding-right: 0;
   }
 
+  .footer__brand-text {
+    font-size: 0.75rem;
+  }
+
+  .footer__column-title {
+    font-size: 0.82rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer__link {
+    font-size: 0.75rem;
+  }
+
+  .footer__contact-text {
+    font-size: 0.75rem;
+  }
+
+  .footer__copyright {
+    font-size: 0.72rem;
+  }
+
+  .footer__bottom-link {
+    font-size: 0.72rem;
+  }
+
+  .footer__initiative-label {
+    font-size: 0.68rem;
+  }
+
+  .footer__initiative-company {
+    font-size: 0.85rem;
+  }
+
   .footer__bottom-content {
     flex-direction: column;
+    text-align: center;
+  }
+
+  .footer__back-top {
+    width: 40px;
+    height: 40px;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .footer__links-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__bottom-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+}
+
+/* Outline Gold Button (used in footer CTA) */
+.btn--outline-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.4rem;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  border: 1px solid var(--color-gold);
+  border-radius: var(--radius-sm);
+  transition: var(--transition-base);
+  white-space: nowrap;
+}
+
+.btn--outline-gold:hover {
+  background: var(--color-gold);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+  .btn--outline-gold {
+    font-size: 0.72rem;
+    padding: 0.6rem 1.2rem;
+    white-space: normal;
     text-align: center;
   }
 }

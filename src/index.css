@@ -112,6 +112,7 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 body {
@@ -405,4 +406,82 @@ ul, ol {
 ::selection {
   background: var(--color-secondary);
   color: var(--color-white);
+}
+
+/* ============================================
+   Mobile Responsive — Global Text & Layout
+   ============================================ */
+@media (max-width: 768px) {
+  :root {
+    --fs-xs: 0.65rem;
+    --fs-sm: 0.75rem;
+    --fs-base: 0.82rem;
+    --fs-md: 0.88rem;
+    --fs-lg: 0.95rem;
+    --fs-xl: 1.05rem;
+    --fs-2xl: 1.25rem;
+    --fs-3xl: 1.5rem;
+    --fs-4xl: 1.75rem;
+    --fs-5xl: 2rem;
+    --fs-hero: 2.2rem;
+    --container-padding: 1.25rem;
+  }
+
+  body {
+    font-size: 0.82rem;
+    line-height: 1.6;
+  }
+
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.3rem; }
+  h3 { font-size: 1.1rem; }
+  h4 { font-size: 0.95rem; }
+
+  p {
+    font-size: 0.82rem;
+    line-height: 1.65;
+  }
+
+  .section-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    flex-wrap: wrap;
+    line-height: 1.4;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .section-label::before {
+    width: 28px;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .section-description {
+    font-size: 0.82rem;
+    line-height: 1.65;
+  }
+
+  .section-padding {
+    padding: 3rem 0;
+  }
+
+  .btn {
+    padding: 0.7rem 1.4rem;
+    font-size: 0.72rem;
+  }
+
+  .btn--gold,
+  .btn--outline-white {
+    padding: 0.7rem 1.4rem;
+    font-size: 0.72rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+    overflow-x: hidden;
+  }
 }
