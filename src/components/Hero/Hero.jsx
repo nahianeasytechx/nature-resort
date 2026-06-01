@@ -20,8 +20,6 @@ const Hero = () => {
 
       <div className="hero__container">
         <div className="hero__content">
-          <p className="hero__label">AN INITIATIVE BY THE PREMIUM HOMES LTD.</p>
-
           <h1 className="hero__title">
             Own a Share in<br />
             <span className="hero__title-highlight">Nature-Inspired</span><br />
