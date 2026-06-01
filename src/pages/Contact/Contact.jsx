@@ -100,7 +100,7 @@ const Contact = () => {
                   <div className="contact-info__icon"><Mail size={24} /></div>
                   <div>
                     <h4>Email</h4>
-                    <p>info@dpremiumhomes.com</p>
+                    <p>info@thenaturebd.com</p>
                   </div>
                 </div>
 
@@ -108,7 +108,7 @@ const Contact = () => {
                   <div className="contact-info__icon"><Clock size={24} /></div>
                   <div>
                     <h4>Business Hours</h4>
-                    <p>Sunday - Thursday: 10:00 AM - 6:00 PM<br/>Friday & Saturday: Closed</p>
+                    <p>Sunday - Thursday: 9:30 AM - 6:30 PM<br/>Friday : Closed</p>
                   </div>
                 </div>
               </div>

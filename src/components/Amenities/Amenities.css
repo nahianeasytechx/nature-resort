@@ -106,7 +106,7 @@
 
 @media (max-width: 640px) {
   .amenities {
-    padding: var(--space-3xl) 0;
+    padding: var(--space-md) 0;
   }
 
   .amenities__grid {

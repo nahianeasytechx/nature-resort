@@ -450,7 +450,11 @@ ul, ol {
     gap: 0.5rem;
     margin-bottom: 0.75rem;
   }
-
+@media (max-width: 460px){
+    .section-label {
+justify-content: center;
+  }
+}
   .section-label::before {
     width: 28px;
   }

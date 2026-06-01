@@ -106,7 +106,7 @@ const Ownership = () => {
           <div className="section-label section-label--light">OWNERSHIP MODEL</div>
           <h1 className="own-hero__title">
             From Land Share<br />
-            <span className="own-hero__title-highlight">Ownership</span> to<br />
+            <span className="own-hero__title-highlight">Ownership</span> to
             Professionally Managed<br />
             Hospitality Operation
           </h1>

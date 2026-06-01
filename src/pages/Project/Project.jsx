@@ -9,7 +9,7 @@ import './Project.css';
 
 // Assets
 import heroBg from '../../assets/Birds eye view.jpg.jpeg';
-import imgRooftop from '../../assets/Night_1.jpg.jpeg';
+import imgRooftop from '../../assets/rooftop.png';
 import imgLobby from '../../assets/VIew_G.jpg.jpeg';
 import imgRoom from '../../assets/View_D_1.jpg.jpeg';
 import imgDining from '../../assets/View_B_1.jpg.jpeg';
@@ -59,9 +59,7 @@ const HIGHLIGHTS = [
 
 const GLIMPSE = [
   { img: imgRooftop, title: 'Rooftop Infinity Pool' },
-  { img: imgLobby, title: 'Grand Lobby' },
-  { img: imgRoom, title: 'Luxury Room' },
-  { img: imgDining, title: 'Fine Dining Restaurant' },
+
   { img: imgExterior, title: 'Exterior View' },
   { img: heroBg, title: "Bird's Eye View" },
   { img: ctaBg, title: 'Beachfront Coastal View' },

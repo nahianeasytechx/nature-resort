@@ -6,7 +6,7 @@ import {
 } from 'lucide-react';
 import './FlagshipProject.css';
 
-import beachImg from '../../assets/bird_beach.jpeg';
+import beachImg from '../../assets/Birds eye view.jpg.jpeg';
 
 const PROJECT_INFO = [
   { icon: Hotel, label: 'Project Type', value: '5-Star Hotel & Resort' },

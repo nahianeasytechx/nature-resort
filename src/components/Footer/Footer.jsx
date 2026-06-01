@@ -124,7 +124,7 @@ const Footer = () => {
           <div className="container">
             <div className="footer__bottom-content">
               <p className="footer__copyright">
-                © 2024 The Nature. All Rights Reserved.
+                © 2026 The Nature. All Rights Reserved.
               </p>
               <div className="footer__bottom-links">
                 <a href="#" className="footer__bottom-link">Privacy Policy</a>
